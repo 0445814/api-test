@@ -1,0 +1,4 @@
+{
+  "dev": "https://jsonplaceholder.typicode.com",
+  "prod": "prod-path"
+}
