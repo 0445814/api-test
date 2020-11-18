@@ -4,21 +4,21 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import {  onMounted } from "vue";
-import { get } from "./api/index";
+import HelloWorld from './components/HelloWorld.vue';
+import { onMounted } from 'vue';
+import { get } from './api/index';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     HelloWorld,
   },
 
   setup() {
-    onMounted( async () => {
-      const data = await get()
+    onMounted(async () => {
+      const data = await get();
 
-      console.log(data)
-    })
+      console.log(data);
+    });
   },
 };
 </script>

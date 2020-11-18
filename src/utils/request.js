@@ -1,20 +1,23 @@
 // axios 實例建立
-import axios from 'axios'
+import axios from 'axios';
 
-const instance = axios.create({
-  baseURL: '../../public/apiPath.json',
-  withCredentials: true,
-  timeout: 1000 * 10,
-});
+function request() {
+  axios.create({
+    withCredentials: true,
+    timeout: 1000 * 10,
+  });
 
-instance.interceptors.request.use(
-  (config) => config,
-  (error) => Promise.reject(error),
-);
+  axios.interceptors.request.use(
+    (config) => config,
+    (error) => Promise.reject(error)
+  );
 
-instance.interceptors.response.use(
-  (response) => response.data,
-  (error) => Promise.reject(error),
-);
+  axios.interceptors.response.use(
+    (response) => response.data,
+    (error) => Promise.reject(error)
+  );
 
-export default instance
+  return axios.get('../../public/apiPath.json').then((response) => response);
+}
+
+export { request, axios };
