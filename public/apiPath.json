@@ -1,4 +1,8 @@
 {
   "dev": "https://jsonplaceholder.typicode.com",
+  "action":{
+    "get": "posts",
+    "get-single": "posts/1"
+  },
   "prod": "prod-path"
 }
