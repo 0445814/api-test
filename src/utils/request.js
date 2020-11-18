@@ -17,7 +17,7 @@ function request() {
     (error) => Promise.reject(error)
   );
 
-  return axios.get('../../public/apiPath.json').then((response) => response);
+  return axios.get('../../public/apiPath.json');
 }
 
 export { request, axios };
