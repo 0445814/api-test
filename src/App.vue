@@ -6,7 +6,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import { onMounted } from 'vue';
-import { get } from './api/index';
+import { showPost } from './api/index';
 export default {
   name: 'App',
   components: {
@@ -15,9 +15,9 @@ export default {
 
   setup() {
     onMounted(async () => {
-      const data = await get();
+      const data = await showPost();
 
-      console.log(data);
+      console.log(data, "DATA");
     });
   },
 };
