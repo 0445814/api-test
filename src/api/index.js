@@ -4,7 +4,7 @@ import { request, axios } from '../utils/request';
 function get() {
   return request().then((response) => {
     const { dev, action } = response;
-    return axios.get(`${dev}/${action.get}`).then((response) => response);
+    return axios.get(`${dev}/${action.get}`);
   });
 }
 
